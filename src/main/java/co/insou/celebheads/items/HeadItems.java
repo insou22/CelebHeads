@@ -1,6 +1,6 @@
-package co.insou.heads.items;
+package co.insou.celebheads.items;
 
-import co.insou.heads.Heads;
+import co.insou.celebheads.Heads;
 
 import java.io.BufferedReader;
 import java.io.IOException;

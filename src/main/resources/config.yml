@@ -1,0 +1,6 @@
+cooldown-seconds: 21600
+
+buy-item:
+  material: 'EMERALD'
+  data: 0
+  amount: 5

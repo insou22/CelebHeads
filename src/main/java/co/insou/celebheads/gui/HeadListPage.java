@@ -1,16 +1,18 @@
-package co.insou.heads.gui;
+package co.insou.celebheads.gui;
 
 import co.insou.colorchar.ColorChar;
 import co.insou.gui.GUIPlayer;
 import co.insou.gui.page.GUIInventory;
 import co.insou.gui.page.GUIPage;
 import co.insou.gui.page.PageInventory;
-import co.insou.heads.Heads;
-import co.insou.heads.items.HeadCategory;
-import co.insou.heads.items.HeadItem;
-import co.insou.heads.items.HeadItems;
+import co.insou.celebheads.Heads;
+import co.insou.celebheads.database.HeadPlayer;
+import co.insou.celebheads.items.HeadCategory;
+import co.insou.celebheads.items.HeadItem;
+import co.insou.celebheads.items.HeadItems;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
+import java.util.Date;
 import java.util.List;
 
 public class HeadListPage extends GUIPage<Heads> {
@@ -34,6 +36,8 @@ public class HeadListPage extends GUIPage<Heads> {
         player.closeGUI(true);
         player.player().getLocation().getWorld().dropItem(player.player().getEyeLocation(), event.getInventory().getItem(event.getSlot()));
         player.player().sendMessage(ColorChar.color(String.format("&aYou were given skull \"%s\"", ColorChar.strip(event.getInventory().getItem(event.getSlot()).getItemMeta().getDisplayName()))));
+        HeadPlayer headPlayer = plugin.getPlayerManager().getPlayer(player.player());
+        headPlayer.setLastClaim(new Date());
     }
 
 }

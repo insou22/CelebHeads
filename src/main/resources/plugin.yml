@@ -1,7 +1,7 @@
-name: Heads
+name: CelebHeads
 version: 1.0-SNAPSHOT
-main: co.insou.heads.Heads
+main: co.insou.celebheads.Heads
 
 commands:
   heads:
-    description: 'Opens the heads gui!'
+    description: 'Opens the celebheads gui!'

@@ -1,4 +1,4 @@
-package co.insou.heads.items;
+package co.insou.celebheads.items;
 
 import co.insou.colorchar.ColorChar;
 import org.bukkit.Material;
